@@ -11,7 +11,7 @@ namespace BankApp
     /// </summary>
     internal class Account
     {
-        private int lastAccountNumber = 0;
+        private static int lastAccountNumber = 0;
         #region Properties
         /// <summary>
         /// Unique account number
@@ -29,6 +29,7 @@ namespace BankApp
         {
             // lastAccountNumber += 1;
             AccountNumber = ++lastAccountNumber;
+            CreatedDate = DateTime.UtcNow;
         }
         #endregion
         #region Methods
